@@ -1,6 +1,9 @@
+/// <reference path="../../../../../typings-module/react-highlight.d.ts" />
+
 import * as React from 'react'
 import * as classNames from 'classnames'
 import * as module from './module'
+import * as Highlight from 'react-highlight'
 import * as marked from 'marked'
 import {Collapse, CollPanel} from '../../../collapse/src'
 import Switch from '../../../switch/src'
@@ -13,7 +16,7 @@ export default class bluekit extends React.Component <module.PropsInterface, mod
 
     toggleUseOriginStyle() {
         this.setState({
-            useOriginStyle: !this.state.useOriginStyle
+            cleanStyle: !this.state.cleanStyle
         })
     }
 
@@ -23,7 +26,9 @@ export default class bluekit extends React.Component <module.PropsInterface, mod
             hasShowCode: true
         }, ()=> {
             this.setState({
-                highLightCodeSource: ''
+                highLightCodeSource: (
+                    <Highlight>{this.props.codeSource}</Highlight>
+                )
             })
         })
     }
@@ -36,12 +41,12 @@ export default class bluekit extends React.Component <module.PropsInterface, mod
 
         const rightToolsClassName = classNames({
             'right-tools': true,
-            'right-tools-active': !this.state.useOriginStyle
+            'right-tools-active': !this.state.cleanStyle
         })
 
         const exampleContainerClassName = classNames({
             'example-container-box': true,
-            'reset': this.state.useOriginStyle
+            'reset': this.state.cleanStyle
         })
 
         return (
@@ -55,7 +60,7 @@ export default class bluekit extends React.Component <module.PropsInterface, mod
                 <div className="code-container">
                     <div className="example-container">
                         <div className={exampleContainerClassName}>
-                            {this.props.children}
+                            {this.props.codeInstance}
                         </div>
                     </div>
                     <div className="code custom">

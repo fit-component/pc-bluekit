@@ -17,7 +17,7 @@ export interface PropsInterface {
     codeSource?: string
 
     /**
-     * 实例
+     * 实例（ReactElement对象）
      */
     codeInstance?: React.ReactElement<any>
 
@@ -35,7 +35,7 @@ export interface StateInterface {
      * 是否使用原始样式
      * 使用 css 样式初始化
      */
-    useOriginStyle?: boolean
+    cleanStyle?: boolean
 
     /**
      * 是否显示了代码内容
@@ -46,10 +46,10 @@ export interface StateInterface {
     /**
      * 经过高亮后的代码html片段
      */
-    highLightCodeSource?: string
+    highLightCodeSource?: React.ReactElement<any>
 }
 
 export class State implements StateInterface {
-    useOriginStyle = false
+    cleanStyle = true
     hasShowCode = false
 }
