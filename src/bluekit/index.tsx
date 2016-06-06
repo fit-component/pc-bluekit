@@ -1,4 +1,5 @@
 /// <reference path="../../../../../typings-module/react-highlight.d.ts" />
+/// <reference path="../../../../../typings-module/marked.d.ts" />
 
 import * as React from 'react'
 import * as classNames from 'classnames'
