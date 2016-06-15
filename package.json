@@ -1,6 +1,6 @@
 {
   "name": "fit-bluekit",
-  "version": "0.0.14",
+  "version": "0.0.16",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -13,13 +13,13 @@
   "author": "huangziyi01",
   "license": "ISC",
   "dependencies": {
-    "react": "^15.0.1",
+    "react": "^15.1.0",
     "classnames": "^2.2.3",
     "react-highlight": "^0.8.0",
     "marked": "^0.3.5",
-    "fit-collapse": "^4.0.1",
-    "fit-switch": "^3.0.10",
-    "fit-transmit-transparently": "^3.1.15"
+    "fit-collapse": "^4.0.3",
+    "fit-switch": "^3.0.12",
+    "fit-transmit-transparently": "^3.1.16"
   },
   "typings": "lib/index.d.ts"
 }
