@@ -1,6 +1,6 @@
 {
   "name": "fit-bluekit",
-  "version": "0.0.53",
+  "version": "0.0.54",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -17,9 +17,9 @@
     "classnames": "2.2.3",
     "react-highlight": "0.8.0",
     "marked": "0.3.5",
-    "fit-collapse": "^4.0.39",
-    "fit-switch": "^3.0.49",
-    "fit-transmit-transparently": "^3.1.63"
+    "fit-collapse": "^4.0.40",
+    "fit-switch": "^3.0.50",
+    "fit-transmit-transparently": "^3.1.64"
   },
   "typings": "lib/index.d.ts"
 }
